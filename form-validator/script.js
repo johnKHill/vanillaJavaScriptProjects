@@ -1,10 +1,13 @@
 // Caching objects from DOM
+// -------------------------------------
 const form = document.getElementById("form");
 const usernme = document.getElementById("username");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
 const password2 = document.getElementById("password2");
 
+//                               Methods
+// -------------------------------------
 // Show input error message
 function showError(input, message) {
   const formControl = input.parentElement;
@@ -43,10 +46,14 @@ function checkRequired(inputArr) {
 // Check input length
 function checkLength(input, min, max) {
   if (input.value.length < min) {
-    showError(input,`${getFieldName(input)} must be atleast ${min} characters`
+    showError(
+      input,
+      `${getFieldName(input)} must be atleast ${min} characters`
     );
   } else if (input.value.length > max) {
-    showError(input,`${getFieldName(input)} must be less than ${max} characters`
+    showError(
+      input,
+      `${getFieldName(input)} must be less than ${max} characters`
     );
   } else {
     showSuccess(input);
@@ -55,7 +62,7 @@ function checkLength(input, min, max) {
 
 // Check if passwords match
 function checkPasswordsMatch(input1, input2) {
-  if(input1.value !== input2.value) {
+  if (input1.value !== input2.value) {
     showError(input2, "Passwords do not match");
   }
 }
@@ -66,6 +73,7 @@ function getFieldName(input) {
 }
 
 // Event Listeners
+// -------------------------------------
 form.addEventListener("submit", function (e) {
   e.preventDefault();
 
