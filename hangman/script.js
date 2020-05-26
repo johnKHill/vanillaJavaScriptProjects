@@ -1,5 +1,5 @@
 //              Caching objects from DOM
-// -------------------------------------const wrongLettersEl = document.getElementById("wrong-letters");
+// -------------------------------------
 const wordEl = document.getElementById("word");
 const wrongLettersEl = document.getElementById("wrong-letters");
 const popup = document.getElementById("popup-container");
