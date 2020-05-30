@@ -77,7 +77,7 @@ h1 button {
   height: 100%;
   width: 100%;
   transform: translateX(50%) rotateY(-10deg); /* turning card over */
-  transition: transform 0.4s ease, opacity 0.4s ease; /* timing ofturning card over */
+  transition: transform 0.4s ease, opacity 0.4s ease; /* timing of turning card over effect */
 }
 
 .card.active {
@@ -102,7 +102,7 @@ h1 button {
 }
 
 .card.show-answer .inner-card {
-  transform: rotateX(180deg); /* rotating/turning card over */
+  transform: rotateX(180deg); /* rotating card on X axis */
 }
 
 .inner-card-front,
@@ -178,7 +178,7 @@ h1 button {
   top: 0;
   bottom: 0;
   width: 100%;
-  transition: 0.3s ease;
+  transition: 0.3s ease; /* add container show effect */
 }
 
 .add-container.show {
