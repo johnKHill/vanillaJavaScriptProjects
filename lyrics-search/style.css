@@ -12,7 +12,6 @@ body {
 /* General button settings */
 button {
   cursor: pointer;
-  text-transform: uppercase;
 }
 
 button:active {
@@ -77,7 +76,7 @@ input:focus {
 
 .form button {
   position: absolute;
-  background-color: #a408c3;
+  background-color: #e056fd;
   border: 0;
   border-radius: 50px;
   color: #fff;
@@ -101,7 +100,7 @@ ul.songs {
   padding: 0;
 }
 
-ul.song li {
+ul.songs li {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -127,6 +126,7 @@ ul.song li {
 .centered {
   display: flex;
   justify-content: center;
+;
 }
 
 .centered button {
