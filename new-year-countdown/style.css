@@ -1,0 +1,98 @@
+/* Lato - Google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+/* base styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("./img/newYear.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  color: #fff;
+  font-family: Lato, sans-serif;
+
+  /* Centering */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+  overflow: hidden;
+  /*  End of centering */
+}
+
+/* Adds a dark overlay - ghost element */
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*  Bring everything above the overlay */
+body * {
+  z-index: 1;
+}
+
+h1 {
+  font-size: 60px;
+  margin: -80px 0 40px;
+}
+
+.year {
+  font-size: 200px;
+  z-index: -1;
+  opacity: 0.2;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.countdown {
+  /* JS will manipulate the display show the flex container*/
+  /* display: flex; */
+  display: none;
+  transform: scale(2);
+}
+
+.time {
+  margin: 15px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.time h2 {
+  margin: 0 0 5px;
+}
+
+/* Media Query */
+@media (max-width: 500px) {
+  h1 {
+    font-size: 45px;
+  }
+
+  .time {
+    margin: 5px;
+  }
+
+  .time h2 {
+    font-size: 12px;
+    margin: 0;
+  }
+
+  .time small {
+    font-size: 10px;
+  }
+}
